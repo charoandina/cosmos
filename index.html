@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/font.css">
+</head>
+<body class="poppins-regular">
+    
+<!--HEADER/LOGO-->
+<header class="container">
+    <a href="index.html" class="a-logo"><img src="img/logo-light.png" alt="Logo" class="logo"></a>
+</header>
+
+<!--PROGRESS BAR-->
+<div class="progress-container" id="progress-bar">
+    <div class="progress-bar" id="myBar"></div>
+</div>
+
+<!--GENDER SELECTION-->
+<div id="gender-selection" class="container title-container">
+    <div class="poppins-bold container title-container">
+        <h1>Know yourself and improve your relationships with <span class="orange"> Cosmos</span></h1>
+        <h2>One minute personal evaluation</h2>
+    </div>
+
+    <div class="question-container">
+        <h3>Select your gender:</h3>
+        <div class="gender-container">
+            <div class="gender-card" id="male-btn">
+                <img src="img/man.png" alt="">
+                <p>Man</p>
+            </div>
+            <div class="gender-card" id="female-btn">
+                <img src="img/women.png" alt="">
+                <p>Women</p>
+            </div>
+      </div>
+    </div>
+</div>
+
+
+
+<!--RELATIONSHIP STATUS-->
+
+<div id="relationship-status" class="hidden container relstatus-container">
+    <div>
+        <h2>In order to get to know your better, tell us about your <span class="orange"> relationship status.</span></h2>
+    </div>
+
+    <div class="relstatus-card-contanier">
+        <div class="relstatus-card" onclick="showGoal()">
+            <img src="img/single.png" alt="">
+            <p>Single</p>
+        </div>
+
+        <div class="relstatus-card" onclick="showGoal()">
+            <img src="img/relationship.png" alt="">
+            <p>In a relationship</p>
+        </div>
+
+        <div class="relstatus-card" onclick="showGoal()">
+            <img src="img/married.png" alt="">
+            <p>Married</p>
+        </div>
+
+        <div class="relstatus-card" onclick="showGoal()">
+            <img src="img/complicated.png" alt="">
+            <p>Complicated</p>
+        </div>
+
+        <div class="relstatus-card" onclick="showGoal()">
+            <img src="img/notsure.png" alt="">
+            <p>I'm not sure / Other</p>
+        </div>
+    </div> 
+</div>
+
+<!--WHAT IS YOUR GOAL?-->
+<div id="goal-status" class="hidden container goal-container">
+    <div>
+        <h2>What is your goal?</h2>
+    </div>
+
+    <div class="goal-card-container">
+        <div class="goal-card" onclick="showGoalPage()">
+            <img src="img/perfectmatch.png" alt="">
+            <p>Find my perfect match</p>
+        </div>
+
+        <div class="goal-card" onclick="showGoalPage()">
+            <img src="img/married.png" alt="">
+            <p>To marry</p>
+        </div>
+
+        <div class="goal-card" onclick="showGoalPage()">
+            <img src="img/knowmyself.png" alt="">
+            <p>Know myself better</p>
+        </div>
+
+        <div class="goal-card" onclick="showGoalPage()">
+            <img src="img/happiness.png" alt="">
+            <p>Achieve happiness</p>
+        </div>
+
+        <div class="goal-card" onclick="showGoalPage()">
+            <img src="img/personalgrowth.png" alt="">
+            <p>Personal growth</p>
+        </div>
+
+        <div class="goal-card" onclick="showGoalPage()">
+            <img src="img/compatibility.png" alt="">
+            <p>Check compatibility</p>
+        </div>
+
+        <div class="goal-card" onclick="showGoalPage()">
+            <img src="img/allprev.png" alt="">
+            <p>All previous</p>
+        </div>
+    </div>
+</div>
+
+
+<!--FIRST GOAL-->
+<div id="first-goal" class="hidden container first-goal-container">
+    <h2><span class="orange">Excellent!</span> <br> You just set your first goal!</h2>
+    <img src="img/firstgoal.png" alt="">
+    <h3>Let's continue so we can get to know you better</h3>
+    <button class="poppins-regular" onclick="showKnowledge()">Continue</button>
+</div>
+
+<!--ASTROLOGY KNOWLEDGE-->
+<div id="astrology-knowledge" class="hidden container knowledge-container">
+    <div>
+        <h2>How do you rate your knowledge of astrology?</h2>
+    </div>
+
+    <div class="knowledge-card-container">
+        <div class="knowledge-card" onclick="showBirth()">
+            <img src="img/expert.png" alt="">
+            <p>An expert</p>
+        </div>
+
+        <div class="knowledge-card" onclick="showBirth()">
+            <img src="img/curious.png" alt="">
+            <p>Curious</p>
+        </div>
+
+        <div class="knowledge-card" onclick="showBirth()">
+            <img src="img/beginner.png" alt="">
+            <p>Beginner</p>
+        </div>
+    </div>
+</div>
+
+<!--BIRTH DATE-->
+<div id="birth-date" class="hidden container birth-date-container">
+    <div>
+        <h2>What is your birth date?</h2>
+    </div>
+    <form id="birthdate-form" action="" onsubmit="determineZodiac(); return false;" class="form-birthday">
+        <div class="birth-date-select-container">
+            <select name="Day" id="day" class="poppins-regular" required></select>
+            <select name="Month" id="month" class="poppins-regular" required></select>
+            <select name="Year" id="year" class="poppins-regular" required></select>
+        </div>
+        <button type="submit" class="poppins-regular">
+            Continue
+        </button>
+    </form>
+</div>
+
+<!--SIGN INFO-->
+<div id="sign-info" class="hidden container signinfo-container">
+    <div class="singinfo-description-container">
+        <h2 id="sign-name" class="orange"></h2>
+        <img src="" alt="" id="sign-img">
+        <p id="sign-description"></p>
+        <button class="poppins-regular" onclick="showStatement()">Continue</button>
+    </div>
+</div>
+
+<!--STATEMENT-->
+<div id="statement" class="hidden container statement-container">
+    <div>
+        <h2>Which statement described you the best?</h2>
+    </div>
+
+    <div class="statement-card-container">
+        <div class="statement-card" onclick="showIntroPersonality()">
+            <img src="img/sad.png" alt="">
+            <p>I'm not very happy with how things are going in my relationship.</p>
+        </div>
+
+        <div class="statement-card" onclick="showIntroPersonality()">
+            <img src="img/beginner.png" alt="">
+            <p>I'm not happy with parts of my relationship, but some things work well</p>
+        </div>
+
+        <div class="statement-card" onclick="showIntroPersonality()">
+            <img src="img/happy.png" alt="">
+            <p>Overall I am happy in my relationship.</p>
+        </div>
+
+        <div class="statement-card" onclick="showIntroPersonality()">
+            <img src="img/curious1.png" alt="">
+            <p>I'm curious what the future has to bring me.</p>
+        </div>
+    </div>
+</div>
+
+<!--INTRO PERSONALITY TRAITS-->
+
+<div id="intro-personality" class="hidden container intro-personality-container">
+    <h2>In order to discover what suits us best, <br> it's often crucial to grasp what doesn't</h2>
+    <img src="img/intropersonality.png" alt="">
+    <h3>We'll provide valuable insights for a joyful and enduring relationship.</h3>
+    <h3>Now, we'd like to gather some details about your <span class="orange">Personality Traits</span> to delve further into this topic!</h3>
+    <button class="poppins-regular" onclick="showChatStatement()">Continue</button>
+</div>
+
+<!--CHAT STATEMENT-->
+<div id="chat-statement" class="container hidden chat-statement-container">
+    <div>
+        <h2>Do you agree with the following statement?</h2>
+        <h3>“I can chat about any topic with someone.”</h3>
+    </div>
+
+    <div class="chat-statement-card-container">
+        <div class="chat-card" onclick="showThoughts()">
+            <img src="img/job1.png" alt="">
+            <p>Totally agree</p>
+        </div>
+
+        <div class="chat-card" onclick="showThoughts()">
+            <img src="img/job4.png" alt="">
+            <p>Ok</p>
+        </div>
+
+        <div class="chat-card" onclick="showThoughts()">
+            <img src="img/job6.png" alt="">
+            <p>Neutral</p>
+        </div>
+
+        <div class="chat-card" onclick="showThoughts()">
+            <img src="img/job5.png" alt="">
+            <p>In disagreement</p>
+        </div>
+
+        <div class="chat-card" onclick="showThoughts()">
+            <img src="img/job3.png" alt="">
+            <p>Strongly disagree</p>
+        </div>
+    </div>
+</div>
+
+<!--FOCUS POSITIVE/NEGATIVE -->
+<div id="thoughts-focus" class="container hidden thoughts-container">
+    <div>
+        <h2>Do you focus on positive or negative things?</h2>
+    </div>
+
+    <div class="thoughts-card-container">
+        <div class="thoughts-card" onclick="showCriticism()">
+            <img src="img/positive-thoughts.png" alt="">
+            <p>Positive</p>
+        </div>
+
+        <div class="thoughts-card" onclick="showCriticism()">
+            <img src="img/negative-thoughts.png" alt="">
+            <p>Negative</p>
+        </div>
+    </div>
+</div>
+
+<!--SENSITIVE TO CRITICISM-->
+<div id="sensitive-criticism" class="container hidden criticism-container">
+    <div>
+        <h2>Are you sensitive to criticism?</h2>
+    </div>
+
+    <div class="criticism-card-container">
+        <div class="criticism-card" onclick="showOverthink()">
+            <img src="img/yes.png" alt="">
+            <p>Yes</p>
+        </div>
+
+        <div class="criticism-card" onclick="showOverthink()">
+            <img src="img/no.png" alt="">
+            <p>No</p>
+        </div>
+    </div>
+</div>
+
+<!--OVERTHINK-->
+<div id="overthink-criticism" class="container hidden overthink-container">
+    <div>
+        <h2>Do you overthink?</h2>
+    </div>
+
+    <div class="overthink-card-container">
+        <div class="overthink-card" onclick="showMostImportant()">
+            <img src="img/yes.png" alt="">
+            <p>Yes</p>
+        </div>
+
+        <div class="overthink-card" onclick="showMostImportant()">
+            <img src="img/no.png" alt="">
+            <p>No</p>
+        </div>
+    </div>
+</div>
+
+<!--MOST IMPORTANT-->
+<div id="most-important" class="container hidden most-important-container">
+    <div>
+        <h2>What is most important to you?</h2>
+    </div>
+
+    <div class="most-important-card-container">
+        <div class="most-important-card" onclick="showEmotionalControl()">
+            <img src="img/success.png" alt="">
+            <p>Success</p>
+        </div>
+
+        <div class="most-important-card" onclick="showEmotionalControl()">
+            <img src="img/single.png" alt="">
+            <p>Romance</p>
+        </div>
+
+        <div class="most-important-card" onclick="showEmotionalControl()">
+            <img src="img/stability.png" alt="">
+            <p>Stability</p>
+        </div>
+
+        <div class="most-important-card" onclick="showEmotionalControl()">
+            <img src="img/freedom.png" alt="">
+            <p>Freedom</p>
+        </div>
+
+        <div class="most-important-card" onclick="showEmotionalControl()">
+            <img src="img/happiness.png" alt="">
+            <p>Happines</p>
+        </div>
+
+        <div class="most-important-card" onclick="showEmotionalControl()">
+            <img src="img/health.png" alt="">
+            <p>Health</p>
+        </div>
+
+        <div class="most-important-card" onclick="showEmotionalControl()">
+            <img src="img/allprev.png" alt="">
+            <p>All previous</p>
+        </div>
+    </div>
+</div>
+
+<!--EMOTIONAL CONTROL-->
+<div id="emotional-control" class="container hidden emotional-control-container">
+    <div>
+        <h2>Do you find it challenging to maintain emotional control?</h2>
+    </div>
+
+    <div class="emotional-control-card-container">
+        <div class="emotional-control-card" onclick="showPagePersonality()">
+            <img src="img/yes-emotional.png" alt="">
+            <p>Yes</p>
+        </div>
+
+        <div class="emotional-control-card" onclick="showPagePersonality()">
+            <img src="img/sometimes.png" alt="">
+            <p>Sometimes</p>
+        </div>
+
+        <div class="emotional-control-card" onclick="showPagePersonality()">
+            <img src="img/rarely.png" alt="">
+            <p>Rarely</p>
+        </div>
+
+        <div class="emotional-control-card" onclick="showPagePersonality()">
+            <img src="img/notatall.png" alt="">
+            <p>Not at all</p>
+        </div>
+    </div>
+</div>
+
+<!--PAGE PERSONALITY TRAITS-->
+
+<div id="page-personality" class="hidden container page-personality-container">
+    <h2>You're not the only one facing this challenge.</h2>
+    <img src="img/hug.png" alt="">
+    <h3>Many individuals born under the <span id="sign-name2"></span> zodiac sign struggle with managing their emotions.</h3>
+    <h3>But don't worry, <br> we're equipped with strategies to help you navigate this!</h3>
+    <button class="poppins-regular" onclick="showJob()">Continue</button>
+</div>
+
+<!--JOB-->
+<div id="job-question" class="container hidden job-container">
+    <div>
+        <h2>Do you like your job?</h2>
+    </div>
+
+    <div class="job-card-container">
+        <div class="job-card" onclick="showKnow()">
+            <img src="img/job1.png" alt="">
+            <p>Yeah! I do something I love</p>
+        </div>
+
+        <div class="job-card" onclick="showKnow()">
+            <img src="img/job2.png" alt="">
+            <p>I’m not working</p>
+        </div>
+
+        <div class="job-card" onclick="showKnow()">
+            <img src="img/job3.png" alt="">
+            <p>I hate my job</p>
+        </div>
+
+        <div class="job-card" onclick="showKnow()">
+            <img src="img/job4.png" alt="">
+            <p>It’s okay, it pays the bills</p>
+        </div>
+
+        <div class="job-card" onclick="showKnow()">
+            <img src="img/job5.png" alt="">
+            <p>I get paid badly</p>
+        </div>
+
+        <div class="job-card" onclick="showKnow()">
+            <img src="img/job6.png" alt="">
+            <p>I have stopped growing professionally</p>
+        </div>
+    </div>
+</div>
+
+<!--KNOW WHAT YOU WANT-->
+<div id="know-question" class="container hidden know-question-container">
+    <div>
+        <h2>Do you always know exactly what you want?</h2>
+    </div>
+
+    <div class="know-question-card-container">
+        <div class="know-question-card" onclick="showRelaxing()">
+            <img src="img/happiness.png" alt="">
+            <p>Yes</p>
+        </div>
+
+        <div class="know-question-card" onclick="showRelaxing()">
+            <img src="img/yes-emotional.png" alt="">
+            <p>No</p>
+        </div>
+
+        <div class="know-question-card" onclick="showRelaxing()">
+            <img src="img/notsure.png" alt="">
+            <p>I'm not sure</p>
+        </div>
+    </div>
+</div>
+
+<!--TROUBLE RELAXING-->
+<div id="trouble-relaxing" class="container hidden trouble-relaxing-container">
+    <div>
+        <h2>Do you find it difficult to relax?</h2>
+    </div>
+
+    <div class="trouble-relaxing-card-container">
+        <div class="trouble-relaxing-card" onclick="showRelationship()">
+            <img src="img/job4.png" alt="">
+            <p>Not at all</p>
+        </div>
+
+        <div class="trouble-relaxing-card" onclick="showRelationship()">
+            <img src="img/job3.png" alt="">
+            <p>Yes</p>
+        </div>
+
+        <div class="trouble-relaxing-card" onclick="showRelationship()">
+            <img src="img/job5.png" alt="">
+            <p>Sometimes</p>
+        </div>
+
+        <div class="trouble-relaxing-card" onclick="showRelationship()">
+            <img src="img/job2.png" alt="">
+            <p>Rarely</p>
+        </div>
+    </div>
+</div>
+
+<!--INTRO RELATIONSHIP PATTERN-->
+
+<div id="intro-relationship" class="hidden container intro-relationship-container">
+    <h2>We're almost there!</h2>
+    <img src="img/introrelationship.png" alt="">
+    <h3>Now, let's customize your strategy by uncovering your <span class="orange">Relationship Pattern</span></h3>
+    <h3>Please take your time to provide thoughtful answers.</h3>
+    <h3>Each response will assist us in crafting a personalized guidance plan just for you.</h3>
+    <button class="poppins-regular" onclick="showSexStatement()">Continue</button>
+</div>
+
+<!--SEX STATEMENT-->
+<div id="sex-statement" class="container hidden sex-statement-container">
+    <div>
+        <h2>Do you agree with the following statement?</h2>
+        <h3>“Sex holds a significant place in my life.”</h3>
+    </div>
+
+    <div class="sex-statement-card-container">
+        <div class="sex-card" onclick="showCommunication()">
+            <img src="img/job1.png" alt="">
+            <p>Totally agree</p>
+        </div>
+
+        <div class="sex-card" onclick="showCommunication()">
+            <img src="img/job4.png" alt="">
+            <p>Agree</p>
+        </div>
+
+        <div class="sex-card" onclick="showCommunication()">
+            <img src="img/job6.png" alt="">
+            <p>Neutral</p>
+        </div>
+
+        <div class="sex-card" onclick="showCommunication()">
+            <img src="img/sad.png" alt="">
+            <p>In disagreement</p>
+        </div>
+
+        <div class="sex-card" onclick="showCommunication()">
+            <img src="img/job3.png" alt="">
+            <p>Strongly disagree</p>
+        </div>
+    </div>
+</div>
+
+<!--SATISFIED COMMUNICATION-->
+<div id="satisfied-communication" class="container hidden satisfied-communication-container">
+    <div>
+        <h2>Are you satisfied with the way you communicate with people?</h2>
+    </div>
+
+    <div class="satisfied-communication-card-container">
+        <div class="satisfied-communication-card" onclick="showEnhancement()">
+            <img src="img/yes.png" alt="">
+            <p>Yes</p>
+        </div>
+
+        <div class="satisfied-communication-card" onclick="showEnhancement()">
+            <img src="img/no.png" alt="">
+            <p>No</p>
+        </div>
+    </div>
+</div>
+
+<!--ENHANCEMENT STATEMENT-->
+<div id="enhancement-statement" class="container hidden enhancement-statement-container">
+    <div>
+        <h2>Do you agree with the following statement?</h2>
+        <h3>"Prioritizing the enhancement of my emotional connection is important to me."</h3>
+    </div>
+
+    <div class="enhancement-statement-card-container">
+        <div class="enhancement-statement-card" onclick="showPartnerCharact()">
+            <img src="img/job1.png" alt="">
+            <p>Totally agree</p>
+        </div>
+
+        <div class="enhancement-statement-card" onclick="showPartnerCharact()">
+            <img src="img/job4.png" alt="">
+            <p>Agree</p>
+        </div>
+
+        <div class="enhancement-statement-card" onclick="showPartnerCharact()">
+            <img src="img/job6.png" alt="">
+            <p>Neutral</p>
+        </div>
+
+        <div class="enhancement-statement-card" onclick="showPartnerCharact()">
+            <img src="img/sad.png" alt="">
+            <p>In disagreement</p>
+        </div>
+
+        <div class="enhancement-statement-card" onclick="showPartnerCharact()">
+            <img src="img/job3.png" alt="">
+            <p>Strongly disagree</p>
+        </div>
+    </div>
+</div>
+
+<!--INTROVERT/EXTROVERT PARTNER-->
+<div id="partner-characteristics" class="container hidden partner-characteristics-container">
+    <div>
+        <h2>Do you prefer your partner to be an introvert or extrovert?</h2>
+    </div>
+
+    <div class="partner-characteristics-card-container">
+        <div class="partner-characteristics-card" onclick="showAngry()">
+            <img src="img/introvert.png" alt="">
+            <p>Introvert</p>
+        </div>
+
+        <div class="partner-characteristics-card" onclick="showAngry()">
+            <img src="img/extrovert.png" alt="">
+            <p>Extrovert</p>
+        </div>
+
+        <div class="partner-characteristics-card" onclick="showAngry()">
+            <img src="img/stability.png" alt="">
+            <p>A little of both</p>
+        </div>
+    </div>
+</div>
+
+<!--ANGRY EASILY-->
+<div id="angry-easily" class="container hidden angry-easily-container">
+    <div>
+        <h2>Do you get angry or irritated easily?</h2>
+    </div>
+
+    <div class="angry-easily-card-container">
+        <div class="angry-easily-card" onclick="showConflict()">
+            <img src="img/angry-yes.png" alt="">
+            <p>Yes</p>
+        </div>
+
+        <div class="angry-easily-card" onclick="showConflict()">
+            <img src="img/angry-sometimes.png" alt="">
+            <p>Sometimes</p>
+        </div>
+
+        <div class="angry-easily-card" onclick="showConflict()">
+            <img src="img/angry-rarely.png" alt="">
+            <p>Rarely</p>
+        </div>
+
+        <div class="angry-easily-card" onclick="showConflict()">
+            <img src="img/angry-not.png" alt="">
+            <p>Not at all</p>
+        </div>
+    </div>
+</div>
+
+<!--CONFLICT DEALING-->
+<div id="conflict-dealing" class="container hidden conflict-dealing-container">
+    <div>
+        <h2>Are you satisfied with the way you deal with conflict?</h2>
+    </div>
+
+    <div class="conflict-dealing-card-container">
+        <div class="conflict-dealing-card" onclick="showAppreciated()">
+            <img src="img/job1.png" alt="">
+            <p>Yes, I prefer to be honest and direct</p>
+        </div>
+
+        <div class="conflict-dealing-card" onclick="showAppreciated()">
+            <img src="img/job4.png" alt="">
+            <p>Depends on the situation and the person</p>
+        </div>
+
+        <div class="conflict-dealing-card" onclick="showAppreciated()">
+            <img src="img/job6.png" alt="">
+            <p>No, I don't want to hurt another person or be hurt.</p>
+        </div>
+
+        <div class="conflict-dealing-card" onclick="showAppreciated()">
+            <img src="img/sad.png" alt="">
+            <p>No, it makes me nervous</p>
+        </div>
+    </div>
+</div>
+
+<!--FEEL APPRECIATED STATEMENT-->
+<div id="appreciated-statement" class="container hidden appreciated-statement-container">
+    <div>
+        <h2>Do you agree with the following statement?</h2>
+        <h3>"I want my partner to make me feel very appreciated."</h3>
+    </div>
+
+    <div class="appreciated-statement-card-container">
+        <div class="appreciated-statement-card" onclick="showPageRelationship()">
+            <img src="img/job1.png" alt="">
+            <p>Totally agree</p>
+        </div>
+
+        <div class="appreciated-statement-card" onclick="showPageRelationship()">
+            <img src="img/job4.png" alt="">
+            <p>Agree</p>
+        </div>
+
+        <div class="appreciated-statement-card" onclick="showPageRelationship()">
+            <img src="img/job6.png" alt="">
+            <p>Neutral</p>
+        </div>
+
+        <div class="appreciated-statement-card" onclick="showPageRelationship()">
+            <img src="img/sad.png" alt="">
+            <p>In disagreement</p>
+        </div>
+
+        <div class="appreciated-statement-card" onclick="showPageRelationship()">
+            <img src="img/job3.png" alt="">
+            <p>Strongly disagree</p>
+        </div>
+    </div>
+</div>
+
+<!--PAGE RELATIONSHIP PATTERN-->
+
+<div id="page-relationship" class="hidden container page-relationship-container">
+    <h2>Feeling nervous is completely natural, <span id="sign-name3" class="orange"></span>. </h2>
+    <img src="img/pagerelationship.png" alt="">
+    <h3>However, we have faith in your abilities.</h3>
+    <h3>Let's continue forward and construct a guidance plan tailored to your astrological blueprint.</h3>
+    <button class="poppins-regular" onclick="showDecisions()">Continue</button>
+</div>
+
+<!--DECISIONS-->
+<div id="decisions-question" class="container hidden decisions-container">
+    <div>
+        <h2>Do you make decisions with your head or with your heart?</h2>
+    </div>
+
+    <div class="decisions-card-container">
+        <div class="decisions-card" onclick="showPercentage()">
+            <img src="img/single.png" alt="">
+            <p>Heart</p>
+        </div>
+
+        <div class="decisions-card" onclick="showPercentage()">
+            <img src="img/head.png" alt="">
+            <p>Head</p>
+        </div>
+
+        <div class="decisions-card" onclick="showPercentage()">
+            <img src="img/both.png" alt="">
+            <p>Both</p>
+        </div>
+    </div>
+</div>
+
+<!--PAGE PERCENTAGE-->
+
+<div id="page-percentage" class="hidden container page-percentage-container">
+    <h2>According to our data, 39% of <span class="orange" id="sign-name4"></span> tend to make decisions using their logical reasoning.  </h2>
+    <img src="img/stability.png" alt="">
+    <h3>We'll take this into account as we develop your guidance plan.</h3>
+    <button class="poppins-regular" onclick="showLoadingPage()">Continue</button>
+</div>
+
+<!--LOADING CONTENT-->
+<div id="loading-content" class="container hidden loading-content-container">
+    <h2>Analyzing your profile...</h2>
+    <div class="loading-container">
+        <div class="text-loading">
+            <h3>Your profile</h3>
+            <h3 id="loading-numbers">0%</h3>
+        </div>
+        <div class="loading-content-bar-container">
+            <div class="loading-content-bar"></div>
+        </div>
+    </div>
+
+    <div class="loading-container">
+        <div class="text-loading">
+            <h3>Personality Traits</h3>
+            <h3 id="loading-numbers2">0%</h3>
+        </div>
+        <div class="loading-content-bar-container">
+            <div class="loading-content-bar2" id="loading-content-bar2"></div>
+        </div>
+    </div>
+
+    <div class="loading-container">
+        <div class="text-loading">
+            <h3>Relationship Pattern</h3>
+            <h3 id="loading-numbers3">0%</h3>
+        </div>
+        <div class="loading-content-bar-container">
+            <div class="loading-content-bar3" id="loading-content-bar3"></div>
+        </div>
+    </div>
+
+    <div class="text-loading-content">
+        <p>Hang on a minute! We're crafting the perfect guidance plan based on your unique astrological blueprint and millions of data points from successful <span class="orange"> Cosmos</span> users.</p>
+    </div>
+    <button id="loading-bar-button" class="poppins-regular hidden" onclick="showForm()">Continue</button>
+</div>
+
+<!--PAGE PERCENTAGE-->
+
+<div id="form-page" class="container hidden form-page-container">
+
+    <form action="" class="form-container">
+        <h2>Please complete the form</h2>
+        <input type="text" id="email" placeholder="Email" required class="poppins-regular">
+        <input type="password" id="password" placeholder="Password" required class="poppins-regular">
+        <button class="poppins-regular" onclick="validateForm(event)">Continue</button>
+    </form>
+
+</div>
+
+<!--WELCOME TO Cosmos-->
+
+<div id="welcome-page" class="container hidden welcome-page-container">
+    <h2>Welcome to <br> <span class="orange">Cosmos</span></h2>
+    <h2 id="new-text" class="hidden">Based on <span class="orange">your answers</span></h2>
+    <h2 id="new-text2" class="hidden">We have created a <span class="orange">blueprint and guidance plan</span> for your life</h2>
+    <h2 id="new-text3" class="hidden">To help you achieve your <span class="orange">dream life</span></h2>
+    <div id="welcome-button" class="hidden final-button">
+        <img src="img/guidance.png" alt="" class="">
+        <button class=" poppins-regular ">Show me my personal guidance</button>
+    </div>
+</div>
+
+
+    
+
+
+<script src="js/script.js"></script>
+</body>
+</html>

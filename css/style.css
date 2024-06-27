@@ -1,0 +1,1593 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../img/background-stars-blue.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.container{
+    width: 90%;
+    max-width: 650px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* PROGRESS BAR */
+
+.progress-container {
+    width: 20%;
+    background-color: #f1f1f11f;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 10px;
+    background-color: #fe6e01;
+    border-radius: 5px;
+}
+
+/*HEADER*/
+
+.a-logo{
+    width: 100%;
+}
+
+.logo{
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 170px;
+}
+
+/*GENDER SELECTION*/
+
+.title-container{
+    flex-direction: column;
+}
+
+h1{
+    text-align: center;
+    font-size: 24px;
+    width: 66%;
+    margin-top: 30px;
+}
+
+h2{
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+.question-container{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gender-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.gender-card{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: center;
+    gap: 25px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+    color: #000;
+    cursor: pointer;
+}
+
+.gender-card img{
+    width: 90%;
+}
+
+.gender-card p{
+    text-decoration: none;
+    transition: text-decoration 5s;
+}
+
+.gender-card p:hover{
+    text-decoration: underline;
+}
+
+/* RELATIONSHIP STATUS */
+
+.relstatus-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.relstatus-container h2{
+    text-align: center;
+}
+
+.relstatus-card-contanier{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.relstatus-card{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: flex-start;
+    color: #000;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.relstatus-card img{
+    width: 10%;
+}
+
+/* WHAT IS YOUR GOAL */
+
+.goal-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.goal-container h2{
+    text-align: center;
+}
+
+.goal-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.goal-card{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: flex-start;
+    color: #000;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.goal-card img{
+    width: 10%;
+}
+
+/* FIRST GOAL PAGE */ 
+
+.first-goal-container{
+    flex-direction: column;
+    justify-content: space-around;
+    height: 530px;
+}
+
+.first-goal-container h2{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.first-goal-container img{
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+.first-goal-container h3{
+    font-weight: 400;
+}
+
+.first-goal-container button{
+    font-size: 20px;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fe6e01;
+    color: #fff;
+    margin-top: 30px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 1s;
+}
+
+.first-goal-container button:hover{
+    background-color: #e76400;
+    transform: scale(1.2);
+}
+
+/*ASTROLOGY KNOWLEDGE*/ 
+
+.knowledge-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.knowledge-container h2 {
+    text-align: center;
+}
+
+.knowledge-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.knowledge-card{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: flex-start;
+    color: #000;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.knowledge-card img{
+    width: 10%;
+}
+
+/* BIRTH DATE */
+
+.birth-date-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.birth-date-container h2{
+    text-align: center;
+}
+
+.birth-date-select-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.form-birthday{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.birth-date-select-container select{
+    width: 120px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+.birth-date-container button{
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fe6e01;
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 1s;
+}
+
+.birth-date-container button:hover{
+    background-color: #e76400;
+    transform: scale(1.2);
+}
+
+/* SIGN INFO */
+
+.signinfo-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.singinfo-description-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.singinfo-description-container h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.singinfo-description-container img{
+    width: 25%;
+    margin-bottom: 20px;
+}
+
+.singinfo-description-container p{
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.singinfo-description-container button {
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fe6e01;
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 1s;
+}
+
+.singinfo-description-container button:hover{
+    background-color: #e76400;
+    transform: scale(1.2);
+}
+
+/* STATEMENT */
+
+.statement-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.statement-container{
+    text-align: center;
+}
+
+.statement-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.statement-card{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: flex-start;
+    color: #000;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.statement-card img{
+    width: 10%;
+}
+
+/* INTRO PERSONALITY TRAITS*/
+
+.intro-personality-container{
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.intro-personality-container h2{
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.intro-personality-container img{
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+.intro-personality-container h3{
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.intro-personality-container button{
+    font-size: 20px;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fe6e01;
+    color: #fff;
+    margin-top: 30px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 1s;
+}
+
+.intro-personality-container button:hover{
+    background-color: #e76400;
+    transform: scale(1.2);
+}
+
+.orange{
+    color: #fe6e01;
+}
+
+/* CHAT STATEMENT */
+
+.chat-statement-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.chat-statement-container h2{
+    text-align: center;
+}
+
+.chat-statement-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.chat-card{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: flex-start;
+    color: #000;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat-card img{
+    width: 10%;
+}
+
+/* FOCUS THOUGHTS */
+
+.thoughts-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.thoughts-container h2 {
+    text-align: center;
+}
+
+.thoughts-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.thoughts-card{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: flex-start;
+    color: #000;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.thoughts-card img{
+    width: 10%;
+}
+
+/* SENSITIVE TO CRITICISM */
+
+.criticism-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.criticism-container h2 {
+    text-align: center;
+}
+
+.criticism-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.criticism-card{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: flex-start;
+    color: #000;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.criticism-card img{
+    width: 10%;
+}
+
+/* OVERTHINK */
+
+.overthink-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.overthink-container h2 {
+    text-align: center;
+}
+
+.overthink-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.overthink-card{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: flex-start;
+    color: #000;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.overthink-card img{
+    width: 10%;
+}
+
+/* MOST IMPORTANT */
+
+.most-important-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.most-important-container h2 {
+    text-align: center;
+}
+
+.most-important-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.most-important-card{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: flex-start;
+    color: #000;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.most-important-card img{
+    width: 10%;
+}
+
+/* EMOTIONAL CONTROL */
+
+.emotional-control-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.emotional-control-container h2 {
+    text-align: center;
+}
+
+.emotional-control-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.emotional-control-card{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: flex-start;
+    color: #000;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.emotional-control-card img{
+    width: 10%;
+}
+
+/* PAGE PERSONALITY*/
+
+.page-personality-container{
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.page-personality-container h2{
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.page-personality-container img{
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+.page-personality-container h3{
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.page-personality-container button{
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fe6e01;
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 1s;
+}
+
+.page-personality-container button:hover{
+    background-color: #e76400;
+    transform: scale(1.2);
+}
+
+#sign-name2{
+    color: #fe6e01;
+    font-weight: 600;
+}
+
+/* JOB */
+
+.job-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.job-container h2 {
+    text-align: center;
+}
+
+.job-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.job-card{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: flex-start;
+    color: #000;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.job-card img{
+    width: 10%;
+}
+
+/* KNOW WHAT YOU WANT */
+
+.know-question-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.know-question-container h2 {
+    text-align: center;
+}
+
+.know-question-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.know-question-card{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: flex-start;
+    color: #000;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.know-question-card img{
+    width: 10%;
+}
+
+/* TROUBLE RELAXING */
+
+.trouble-relaxing-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.trouble-relaxing-container h2 {
+    text-align: center;
+}
+
+.trouble-relaxing-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.trouble-relaxing-card{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: flex-start;
+    color: #000;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.trouble-relaxing-card img{
+    width: 10%;
+}
+
+/* INTRO PERSONALITY TRAITS*/
+
+.intro-relationship-container{
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.intro-relationship-container h2{
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.intro-relationship-container img{
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+.intro-relationship-container h3{
+    font-weight: 400;
+    text-align: center;
+}
+
+.intro-relationship-container button{
+    font-size: 20px;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fe6e01;
+    color: #fff;
+    margin-top: 30px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 1s;
+}
+
+.intro-relationship-container button:hover{
+    background-color: #e76400;
+    transform: scale(1.2);
+}
+
+/* SEX STATEMENT */
+
+.sex-statement-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.sex-statement-container h2 {
+    text-align: center;
+}
+
+.sex-statement-container h3{
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sex-statement-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.sex-card{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: flex-start;
+    color: #000;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sex-card img{
+    width: 10%;
+}
+
+/* SATISFIED COMMUNICATION */
+
+.satisfied-communication-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.satisfied-communication-container h2 {
+    text-align: center;
+}
+
+.satisfied-communication-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.satisfied-communication-card{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: flex-start;
+    color: #000;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.satisfied-communication-card img{
+    width: 10%;
+}
+
+/* ENHANCEMENT STATEMENT */
+
+.enhancement-statement-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.enhancement-statement-container h2 {
+    text-align: center;
+}
+
+.enhancement-statement-container h3{
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.enhancement-statement-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.enhancement-statement-card{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: flex-start;
+    color: #000;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.enhancement-statement-card img{
+    width: 10%;
+}
+
+/* INTROVERT/EXTROVERT PARTNER */
+
+.partner-characteristics-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.partner-characteristics-container h2 {
+    text-align: center;
+}
+
+.partner-characteristics-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.partner-characteristics-card{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: flex-start;
+    color: #000;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.partner-characteristics-card img{
+    width: 10%;
+}
+
+/* ANGRY EASILY */
+
+.angry-easily-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.angry-easily-container h2 {
+    text-align: center;
+}
+
+.angry-easily-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.angry-easily-card{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: flex-start;
+    color: #000;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.angry-easily-card img{
+    width: 10%;
+}
+
+/* CONFLICT DEALING */
+
+.conflict-dealing-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.conflict-dealing-container h2 {
+    text-align: center;
+}
+
+.conflict-dealing-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.conflict-dealing-card{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: flex-start;
+    color: #000;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.conflict-dealing-card img{
+    width: 10%;
+}
+
+/* FEEL APPRECIATED STATEMENT */
+
+.appreciated-statement-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.appreciated-statement-container h2 {
+    text-align: center;
+}
+
+.appreciated-statement-container h3{
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.appreciated-statement-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.appreciated-statement-card{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: flex-start;
+    color: #000;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.appreciated-statement-card img{
+    width: 10%;
+}
+
+/* PAGE RELATIONSHIP PATTERN*/
+
+.page-relationship-container{
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.page-relationship-container h2{
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.page-relationship-container img{
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+.page-relationship-container h3{
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.page-relationship-container button{
+    font-size: 20px;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fe6e01;
+    color: #fff;
+    margin-top: 30px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 1s;
+}
+
+.page-relationship-container button:hover{
+    background-color: #e76400;
+    transform: scale(1.2);
+}
+
+/* MAKING DECISIONS */
+
+.decisions-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.decisions-container h2 {
+    text-align: center;
+}
+
+.decisions-card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.decisions-card{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    width: 55%;
+    justify-content: flex-start;
+    color: #000;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.decisions-card img{
+    width: 10%;
+}
+
+/* PAGE PERCENTAGE*/
+
+.page-percentage-container{
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.page-percentage-container h2{
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.page-percentage-container img{
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+.page-percentage-container h3{
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.page-percentage-container button{
+    font-size: 20px;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fe6e01;
+    color: #fff;
+    margin-top: 30px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 1s;
+}
+
+.page-percentage-container button:hover{
+    background-color: #e76400;
+    transform: scale(1.2);
+}
+
+/* LOADING CONTENT */
+
+.loading-content-container{
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.loading-content-container h2{
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.loading-container{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.text-loading{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.loading-content-bar-container{
+    width: 70%;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: #f1f1f11f;
+    border-radius: 5px;
+}
+
+.loading-content-bar,.loading-content-bar2,.loading-content-bar3 {
+    height: 8px;
+    background-color: #fe6e01;
+    width: 0%;
+    border-radius: 5px;
+}
+
+.smooth-loading {
+    animation: loadingAnimation 10s forwards; /* Asegúrate de ajustar la duración de la animación según tu preferencia */
+}
+
+@keyframes loadingAnimation {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.loading-content-container h3{
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.text-loading-content{
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.text-loading-content p {
+    text-align: center;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.loading-content-container button{
+    font-size: 20px;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fe6e01;
+    color: #fff;
+    margin-top: 30px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 1s;
+}
+
+.loading-content-container button:hover{
+    background-color: #e76400;
+    transform: scale(1.2);
+}
+
+/* FORM PAGE */
+
+.form-page-container{
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.form-page-container h2{
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff77;
+    padding: 15px;
+    border-radius: 5px;
+
+}
+
+input{
+    height: 40px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 10px;
+    outline: #fe6e01;
+}
+
+input:focus{
+    border: 1px solid #fe6e01;
+}
+
+.flexbox{
+    display: flex;
+    gap: 10px;
+}
+
+.form-page-container button{
+    font-size: 20px;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fe6e01;
+    color: #fff;
+    margin-top: 20px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 1s;
+}
+
+.form-page-container button:hover{
+    background-color: #ca5800;
+}
+
+/* FORM PAGE */
+
+.welcome-page-container{
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 30px;
+    height: 500px;
+}
+
+.welcome-page-container h2{
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.fade-in {
+    animation: fadeInAnimation 2s ease-in;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-out {
+    animation: fadeOutAnimation 2s ease-out;
+}
+
+@keyframes fadeOutAnimation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.final-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.final-button img {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.welcome-page-container button{
+    font-size: 25px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fe6e01;
+    color: #fff;
+    margin-top: 20px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 1s;
+}
+
+.welcome-page-container button:hover{
+    background-color: #ca5800;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/*MEDIA Q*/
+
+@media (max-width: 600px) {
+    .gender-container, .birth-date-select-container{
+        flex-direction: column;
+    }
+    .gender-card{
+        width: 30%;
+    }
+    .relstatus-card-contanier,.goal-card-container,.first-goal-card-container
+    ,.knowledge-card-container,.statement-card-container,.chat-statement-card-container,
+    .thoughts-card-container,.criticism-card-container,.overthink-card-container,.most-important-card-container
+    ,.emotional-control-card-container,.job-card-container, .know-question-card-container,
+    .trouble-relaxing-card-container,.sex-statement-card-container,.satisfied-communication-card-container,
+    .enhancement-statement-card-container,.partner-characteristics-card-container,
+    .angry-easily-card-container,.conflict-dealing-card-container,.appreciated-statement-card-container
+    ,.decisions-card-container{
+        gap: 20px;
+    }
+    .relstatus-container h2,.goal-container h2,.knowledge-container h2,.statement-container h2,
+    .birth-date-container h2,.singinfo-description-container h2,.intro-personality-container h2,
+    .chat-statement-container h2,.thoughts-container h2,.criticism-container h2 ,.overthink-container h2,
+    .most-important-container h2,.emotional-control-container h2,.job-container h2 ,
+    .know-question-container h2,.trouble-relaxing-container h2,.sex-statement-container h2,
+    .satisfied-communication-container h2, .enhancement-statement-container h2,.partner-characteristics-container h2,
+    .angry-easily-container h2,.conflict-dealing-container h2,.appreciated-statement-container h2,
+    .decisions-container h2{
+        font-size: 20px;
+        padding: 0px 10px;
+    }
+    h1, .loading-container{
+        width: 100%;
+    }
+    .goal-card, .relstatus-card, .knowledge-card, .statement-card, .chat-card, .thoughts-card, .criticism-card,
+    .overthink-card, .most-important-card, .emotional-control-card, .job-card,.know-question-card,.trouble-relaxing-card,
+    .sex-card, .satisfied-communication-card, .enhancement-statement-card, .partner-characteristics-card, .angry-easily-card,
+    .conflict-dealing-card, .appreciated-statement-card, .decisions-card{
+        width: 75%;
+    }
+    .first-goal-container h3{
+        text-align: center;
+    }
+    .first-goal-container img, .singinfo-description-container img, .intro-personality-container img, .page-personality-container img,
+    .intro-relationship-container img, .page-relationship-container img, .page-percentage-container img{
+        width: 40%;
+    }
+    .chat-statement-container h3{
+        text-align: center;
+        margin-top: 10px;
+    }
+}
